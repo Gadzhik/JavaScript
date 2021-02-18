@@ -187,5 +187,31 @@ const newAarray = [...aarray];
 console.log(newAarray);
  */
 
+// OOP
+const soldier = {
+    health: 500,
+    armor: 100,
+    sayHello: function() {
+        console.log("Hello!");
+    }
+};
+
+const jonh = Object.create(soldier);
+
+/* const jonh = {
+    health = 100
+}; */
+
+// old type of recording -> not used in present days
+// jonh.__proto__ = soldier;
+
+// new type of recording
+// Object.setPrototypeOf(jonh, soldier);
+
+// console.log(jonh.armor);
+jonh.sayHello();
+
+
+
 
 
