@@ -211,25 +211,7 @@ const jonh = Object.create(soldier);
 // console.log(jonh.armor);
 jonh.sayHello();
 
-// test part of the script
-function hello() {
-    console.log("Hello dude!");
-}
 
-hello();
 
-function hi() {
-    console.log("Say Hi!");
-}
 
-hi();
-
-const arra = [1, 2, 52, 58, 87],
-    sorted = arra.sort(compareNum);
-
-function compareNum(a, b) {
-    return a - b;
-}
-
-console.log(sorted);
 
