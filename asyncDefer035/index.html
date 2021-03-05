@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- using defer -->
+    <!--defer - сообщает браузеру, что он должен продолжать обрабатывать
+    страницу и продолжает загружать/запускать скрипт в фоновом режиме 
+    1. скрипты с defer никогда не блокируют страницу
+    2. скрипты с атрибутом defer, всегда выполняются, когда dom дерево
+    готово, т.е они ждут полной готовности верстки-->
+    {% comment %} <script defer src="js/script.js"></script> {% endcomment %}
+
+    <!-- using async 
+    1. Страница не ждет асинхронных скриптов, содежимое просто обрабатывается и
+    отображается
+    2. События DOMContentLoaded и скрипты не ждут друг друга
+    3. Скрипты никого не ждут, они работают как только загрузятся.
+    Кто первый загрузился, тот и работает 
+    4. Мы должны быть уверены, что скрипты async не зависят от DOM структуры
+    и не должен зависеть от других скриптов -->
+    {% comment %} <script async src="js/script.js"></script> {% endcomment %}
+
+    <p>Hello!</p>
+    <p>Second message</p>
+
+    <script async src="js/script.js"></script>
+    
+</body>
+</html>
